@@ -1,5 +1,6 @@
 ﻿using Grocery.App.ViewModels;
 using Grocery.App.Views;
+using System.Globalization;
 
 namespace Grocery.App
 {
@@ -9,8 +10,10 @@ namespace Grocery.App
         {
             InitializeComponent();
 
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-NL");
             //MainPage = new AppShell();
             MainPage = new LoginView(viewModel);
+
         }
     }
 }
